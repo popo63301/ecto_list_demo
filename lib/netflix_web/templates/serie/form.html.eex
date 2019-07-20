@@ -10,9 +10,9 @@
   <%= error_tag f, :title %>
 
   <%= if @view_template == "edit.html" do %>
-    <div class="StackedList">
+    <div class="StackedList list">
     <%= for video <- @videos do %>
-      <div class="StackedListItem">
+      <div class="StackedListItem list_item">
         <%= hidden_input f, :items_order, name: "items_order[]", value: video.id %>
         <%= video.id %> - <%= video.title %>
       </div>

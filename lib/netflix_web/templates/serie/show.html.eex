@@ -8,15 +8,17 @@
   </li>
 
   <li>
-    <strong>Items order:</strong>
+    <strong>Videos:</strong>
     <%= @serie.items_order %>
   </li>
 
-  <%= for video <- @videos do %>
-    <div>
-      <%= video.title %>
-    </div>
-  <% end %>
+  <div class="list">
+    <%= for video <- @videos do %>
+      <div class="list_item">
+        <%= video.title %>
+      </div>
+    <% end %>
+  </div>
 
 </ul>
 

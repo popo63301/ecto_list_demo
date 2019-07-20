@@ -1,3 +1,19 @@
 /* This file is for your main application css. */
 
 @import "./phoenix.css";
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list_item {
+  margin-bottom: 10px;
+  width: 200px;
+  padding: 40px;
+  text-align: center;
+  border: 1px green solid;
+  border-radius: 10px;
+  font-weight: bold;
+  color: green;
+}
