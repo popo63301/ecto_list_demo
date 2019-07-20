@@ -1,0 +1,28 @@
+<h1>Listing Series</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Items order</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for serie <- @series do %>
+    <tr>
+      <td><%= serie.title %></td>
+      <td><%= serie.items_order %></td>
+
+      <td>
+        <%= link "Show", to: Routes.serie_path(@conn, :show, serie) %>
+        <%= link "Edit", to: Routes.serie_path(@conn, :edit, serie) %>
+        <%= link "Delete", to: Routes.serie_path(@conn, :delete, serie), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Serie", to: Routes.serie_path(@conn, :new) %></span>

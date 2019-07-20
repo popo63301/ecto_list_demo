@@ -1,0 +1,26 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <%= label f, :title %>
+  <%= text_input f, :title %>
+  <%= error_tag f, :title %>
+
+  <%= if @view_template == "edit.html" do %>
+    <div class="StackedList">
+    <%= for video <- @videos do %>
+      <div class="StackedListItem">
+        <%= hidden_input f, :items_order, name: "items_order[]", value: video.id %>
+        <%= video.id %> - <%= video.title %>
+      </div>
+    <% end %>
+    </div>
+  <% end %> 
+
+  <div>
+    <%= submit "Save" %>
+  </div>
+<% end %>

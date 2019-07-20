@@ -1,0 +1,24 @@
+<h1>Show Serie</h1>
+
+<ul>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @serie.title %>
+  </li>
+
+  <li>
+    <strong>Items order:</strong>
+    <%= @serie.items_order %>
+  </li>
+
+  <%= for video <- @videos do %>
+    <div>
+      <%= video.title %>
+    </div>
+  <% end %>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.serie_path(@conn, :edit, @serie) %></span>
+<span><%= link "Back", to: Routes.serie_path(@conn, :index) %></span>
