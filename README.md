@@ -1,20 +1,16 @@
-# Netflix
+# ecto_list_demo
 
-To start your Phoenix server:
+Netflix-like demo of [ecto_list](https://github.com/popo63301/ecto_list).
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Install Node.js dependencies with `cd assets && npm install`
-  * Start Phoenix endpoint with `mix phx.server`
+![ecto_list](https://user-images.githubusercontent.com/29427340/61579593-79514200-ab07-11e9-8ee6-dac77b949cd2.gif)
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+## Setup
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+To start this application:
 
-## Learn more
+- Install dependencies with `mix deps.get`
+- Create and migrate the database with `mix ecto.setup`
+- Install Node.js dependencies with `cd assets && npm install`
+- Start Phoenix endpoint with `mix phx.server`
 
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+Now you can visit [`localhost:4000`](http://localhost:4000) from your browser
